@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,9 +15,11 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  background-color: #F5F5F5;
   overflow-x: hidden;
   margin: 0;
   font-family: 'Poppins';
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -25,20 +27,52 @@ body {
 
 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ .table__section {
+  border-radius: 20px;
+  padding-top: 20px;
+  margin: 20px;
+  width: 639px;
 }
- nav {
-   background-color: aqua;
-   width: 209px;
-   text-align: center;
-   margin: auto;
- }
-  /* .li {
-    background-color: blue;
-    display: flex;
+
+/*
+table thead tr th,
+table tbody tr td {
+  font-weight: 400;
+  font-size: 16px;
+  
+} */
+
+button{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+table tbody tr {
+  background: rgba(239, 245, 245, 0.7);
+  border-radius: 10px;
+  width: 639px;
+  height: 53px;
   }
-  .li:hover {
-    background-color: red;
-  } */
+  
+  
+
+/* search */
+.search {
+	display: flex;
+  width: 706px;
+  height: 52px;
+	align-items: center;
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 1.5em;
+  background-color: white;
+  margin: 14px;
+}
+
+.search input {
+	border: none;
+	width: 100%;
+}
+
+.search input:focus {
+	outline: none;
+}
