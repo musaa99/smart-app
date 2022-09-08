@@ -1,7 +1,7 @@
 import React from "react";
 import Searchbar from "../../components/standardDashboard/navbar/searchbar.jsx";
 import Navbar from "../../components/standardDashboard/navbar/navbar";
-import EditProfile from "../../components/standardDashboard/usersModule/EditProfile.jsx";
+import EditProfile from "../../components/standardDashboard/editProfile/EditProfile.jsx";
 
 const ProfileEdit = () => {
   return (

@@ -9,11 +9,9 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white h-[full] lg:w-[290px] ">
-      <div className=" mt-[20px]  ">
-        <div>
-          <img className=" ml-[40px]" src={logo} alt="" />
-        </div>
+    <nav className="bg-white h-[full] lg:w-[20%] ">
+      <div className=" mt-[]  ">
+
         <ul className=" justify-center pt-[60px]">
           {SidebarData.map((item, index) => {
             return (

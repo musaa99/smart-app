@@ -7,20 +7,30 @@ import Navbar from '../../components/standardDashboard/navbar/navbar'
 
 const Dashboard = () => {
   return (
-    <div className='flex'>
-    <div className='flex'>
-      <Navbar/>
-    </div>
-    <div>
-      <div className='grid grid-cols-1'>
-        <Searchbar/>
-        <DashboardTop/>
-        <DashboardMain/>
-        <Attendance/>
-      </div>
-    </div>
+    // <div className='flex'>
+    // <div className='flex'>
+    //   <Navbar/>
+    // </div>
+    // <div>
+    //   <div className='grid grid-cols-1'>
+    //     <Searchbar/>
+    //     <DashboardTop/>
+    //     <DashboardMain/>
+    //     <Attendance/>
+    //   </div>
+    // </div>
    
+    // </div>
+    < >
+    <div className=''>
+    <Searchbar/>
+    <Navbar/>
+    <main>
+
+    </main>
+     <DashboardTop/>
     </div>
+    </>
   )
 }
 
