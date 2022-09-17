@@ -6,14 +6,14 @@ import Notification from "../../components/standardDashboard/notification/Notifi
 
 const NotificationPage = () => {
   return (
-    <div className="flex">
-    <div className="flex">
+    <div className="lg:flex">
+    <div className="hidden lg:flex">
       <Navbar />
     </div>
-    <div>
-      <div className="grid grid-cols-1">
+    <div className=" w-[-webkit-fill-available]">
+      <div className="  block  lg:grid lg:grid-cols-1">
         <Searchbar />
-        <Notification />
+       <Notification/>
       </div>
     </div>
   </div>

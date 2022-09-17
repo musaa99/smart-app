@@ -5,6 +5,7 @@ export const  leaderboard = [
     department: "Operations",
     employee: "Martha Grey",
     status: "Present",
+    button:"see more"
  
   },
   {

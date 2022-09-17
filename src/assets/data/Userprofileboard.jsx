@@ -1,12 +1,10 @@
 import { Icon } from '@iconify/react';
-//  import {  useNavigate } from 'react-router-dom';
 export const  Userprofileboard = [
     {
         title: "Profile",
         path: "/ProfileEdit",
         cName: "Profile",
         icon: <Icon icon="eva:arrow-ios-back-fill" rotate={2} />
-        // hello : {}
    
     },
     {
@@ -25,7 +23,7 @@ export const  Userprofileboard = [
     },
     {
         title: "Logins and Security",
-        path: "#",
+        path: "/LoginPage",
         cName: "Profile",
         icon: <Icon icon="eva:arrow-ios-back-fill" rotate={2} />
     },

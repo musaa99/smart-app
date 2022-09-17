@@ -9,70 +9,25 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  height: fit-content;
 }
 
-body {
+/* body, html {
   margin: 0;
   height: 100%;
-  width: 100%;
+  width: 100%; 
   background-color: #F5F5F5;
-  overflow-x: hidden;
+  overflow-x: hidden; 
   margin: 0;
-  font-family: 'Poppins';
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-}
-
-
-
- .table__section {
-  border-radius: 20px;
-  padding-top: 20px;
-  margin: 20px;
-  width: 639px;
-}
-
-/*
-table thead tr th,
-table tbody tr td {
-  font-weight: 400;
-  font-size: 16px;
-  
 } */
 
-button{
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
-table tbody tr {
-  background: rgba(239, 245, 245, 0.7);
-  border-radius: 10px;
-  width: 639px;
-  height: 53px;
-  }
+
+ 
   
   
 
-/* search */
-.search {
-	display: flex;
-  width: 706px;
-  height: 52px;
-	align-items: center;
-	border-radius: 10px;
-	padding: 5px;
-	margin-bottom: 1.5em;
-  background-color: white;
-  margin: 14px;
-}
-
-.search input {
-	border: none;
-	width: 100%;
-}
-
-.search input:focus {
-	outline: none;
-}

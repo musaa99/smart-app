@@ -1,9 +1,9 @@
 import React from 'react'
-import EmailPreference from '../../components/standardDashboard/emailPreference/EmailPreference'
+import Login from '../../components/standardDashboard/logins/Login'
 import Navbar from '../../components/standardDashboard/navbar/navbar'
 import Searchbar from '../../components/standardDashboard/navbar/searchbar'
 
-const EmailPreferencePage = () => {
+const LoginPage = () => {
   return (
     <div className="lg:flex">
     <div className="hidden lg:flex">
@@ -12,11 +12,11 @@ const EmailPreferencePage = () => {
     <div className=" w-[-webkit-fill-available]">
       <div className="  block  lg:grid lg:grid-cols-1">
         <Searchbar />
-       <EmailPreference/>
+       <Login/>
       </div>
     </div>
   </div>
   )
 }
 
-export default EmailPreferencePage
+export default LoginPage

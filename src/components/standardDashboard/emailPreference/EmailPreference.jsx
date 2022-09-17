@@ -3,9 +3,9 @@ import Preference from './Preference'
 
 const EmailPreference = () => {
   return (
-    <div className='m-4 pt-4 '>
+    <div className='m-4 pt-4 w-[auto] '>
         <h1 className='text-[30px] font-bold leading-[45px]'>Email Preferences</h1>
-        <div className='pt-[50px]'>
+        <div className='lg:pt-[50px]'>
             <div>
                 <Preference
                 header="Email Notifications"
@@ -34,7 +34,7 @@ const EmailPreference = () => {
             </div>
             <div>
                 <Preference
-                header="Unsubscribe from all"
+                header="Unsubscribe From All"
                 text="You will recieve no further updates"
                 />
             </div>

@@ -5,30 +5,17 @@ import UsersProfile from '../../components/standardDashboard/usersModule/UsersPr
 
 const Users = () => {
   return (
-    // <div className='flex'>
-    // <div className='flex'>
-    //   <Navbar/>
-    // </div>
-    // <div>
-    //   <div className='grid grid-cols-1'>
-    //     <Searchbar/>
-    //     <UsersProfile/>
-        
-    //   </div>
-    // </div>
-   
-    // </div>
-
-<>
-<div>
-<Searchbar/>
-<main className='flex'>
-<Navbar/>
-{/* <DashboardTop/> */}
-{/* <Attendance/> */}
-</main>
-</div>
-</>
+    <div className="lg:flex">
+      <div className="hidden lg:flex">
+        <Navbar />
+      </div>
+      <div className=" w-[-webkit-fill-available]">
+        <div className="  block  lg:grid lg:grid-cols-1">
+          <Searchbar />
+         <UsersProfile/>
+        </div>
+      </div>
+    </div>
   )
 }
 

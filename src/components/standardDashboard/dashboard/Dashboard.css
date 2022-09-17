@@ -1,0 +1,43 @@
+
+  table tbody tr {
+    background: rgba(239, 245, 245, 0.7);
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    }
+  
+
+  
+  
+  
+  
+
+    @media (min-width: 375px ) {
+        .table__section {
+            width: auto;
+            padding-top: 30px;
+            border-radius: 20px;
+            margin: 20px;
+          }
+          table tbody tr {
+            width: auto;
+            height: auto;
+            margin: 2px,2px;
+            }
+          
+         
+    }
+/* monthly log */
+    h3{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media (min-width: 375px) {
+      h3{
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
