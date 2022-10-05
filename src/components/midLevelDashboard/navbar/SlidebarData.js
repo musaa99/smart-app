@@ -8,7 +8,7 @@ import { Icon } from '@iconify/react';
 export const SidebarData = [
   {
     title: "Dashboard",
-    path: "/dashboard2",
+    path: "#",
       // icon: <Icon icon="akar-icons:dashboard" inline={true} />,
     // icon: <Icon icon="fluent:people-team-20-regular" hFlip={true} />,
      icon: <Icon icon="tabler:layout-dashboard" inline={true} />,
@@ -16,13 +16,13 @@ export const SidebarData = [
   },
   {
     title: "Users",
-    path: "/",
+    path: "#",
     icon: <Icon icon="ph:users-bold" />,
     cName: "nav-text"
   },
   {
     title: "Team",
-    path: "/",
+    path: "#",
     icon: <Icon icon="fluent:people-team-20-regular" hFlip={true} />,
     cName: "nav-text"
   },

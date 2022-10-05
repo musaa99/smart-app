@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import logo from "../../../assets/logo.svg";
+
 // DATA FILE
 import { SidebarData } from "./SlidebarData";
 
@@ -8,13 +9,17 @@ import { SidebarData } from "./SlidebarData";
 import "./Navbar.css";
 
 const Navbar = () => {
+
   return (
-    <nav className="bg-white h-[full] lg:w-[290px] ">
-      <div className="  ">
-        <div>
-          <img className=" ml-[40px]" src={logo} alt="" />
+    <nav className=" hidden lg:flex">
+      
+
+    <div className="bg-white border   h-[auto] lg:w-[290px] ">
+      <div className=" none mt-[]  ">
+        <div className="">
+          <img className=" pt-[20px] w-[auto] m-auto" src={logo} alt="" />
         </div>
-        <ul className=" justify-center pt-[60px]">
+         <ul className=" justify-center pt-[60px]">
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className={item.cName}>
@@ -31,12 +36,14 @@ const Navbar = () => {
               </li>
             );
           })}
-        </ul>
-        <div className="ml-[60px] pt-[114px]">
-        <p>Standard User</p>
+        </ul> 
+       
+        <div className="ml-[60px] pt-[]">
+        <p className="pt-[400px]">Administrator</p>
         <button className=" text-[red]">logout</button>
         </div>
       </div>
+    </div>
     </nav>
   );
 };

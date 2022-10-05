@@ -50,9 +50,9 @@ const Searchbar = () => {
           />
         </div>
       </form>
-      <div className="hidden md:hidden   lg:flex items-center ">
+      <div className="hidden md:hidden  px-4 mr-3 justify-between  lg:flex  items-center ">
+        <img className="lg:mr-4" onClick={handleSubmit} src={bell} alt="notificationbell" />
         <img src={profilepic} alt="profilepicture" />
-        <img onClick={handleSubmit} src={bell} alt="notificationbell" />
       </div>
     </div>
     </div>

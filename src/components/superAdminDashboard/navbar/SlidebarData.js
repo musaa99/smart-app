@@ -8,19 +8,21 @@ import { Icon } from '@iconify/react';
 export const SidebarData = [
   {
     title: "Dashboard",
-    path: "/dashboard",
-    icon: <Icon icon="akar-icons:dashboard" />,
+    path: "#",
+      // icon: <Icon icon="akar-icons:dashboard" inline={true} />,
+    // icon: <Icon icon="fluent:people-team-20-regular" hFlip={true} />,
+     icon: <Icon icon="tabler:layout-dashboard" inline={true} />,
     cName: "nav-text"
   },
   {
     title: "Users",
-    path: "/Users",
+    path: "/User3",
     icon: <Icon icon="ph:users-bold" />,
     cName: "nav-text"
   },
   {
     title: "Team",
-    path: "/Users",
+    path: "#",
     icon: <Icon icon="fluent:people-team-20-regular" hFlip={true} />,
     cName: "nav-text"
   },
@@ -44,17 +46,17 @@ export const SidebarData = [
     cName: "nav-text"
   },
  
-  {
-    title: "Organization Setup",
-    path: "#",
-    icon: <Icon icon="cil:history" hFlip={true} />,
-    cName: "nav-text"
-  },
-  {
-    title: "Integration",
-    path: "#",
-    icon: <Icon icon="cil:history" hFlip={true} />,
-    cName: "nav-text"
-  },
+  // {
+  //   title: "Organization Setup",
+  //   path: "#",
+  //   icon: <Icon icon="cil:history" hFlip={true} />,
+  //   cName: "nav-text"
+  // },
+  // {
+  //   title: "Integration",
+  //   path: "#",
+  //   icon: <Icon icon="cil:history" hFlip={true} />,
+  //   cName: "nav-text"
+  // },
  
 ];
