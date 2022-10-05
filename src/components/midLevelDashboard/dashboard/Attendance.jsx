@@ -1,50 +1,41 @@
 import React from "react";
-import { leaderboard } from "../../../assets/data/leaderboard";
+import { Places } from "../../../assets/data/Places";
+import { Link } from "react-router-dom";
+
 // import WeeklyStatus from "./WeeklyStatus";
-import bar from '../../../assets/barchart.svg'
 
 const Attendance = () => {
   return (
-    <div className="flex">
-      <div className="w-[673px] h-[565px] rounded-[4px] m-3 bg-white shadow ">
+      <div className=" w-[465px] lg:w-[auto] h-[auto] lg:h-[auto] rounded-[4px] m-3 bg-white shadow ">
         <div className="table__section">
-          <h1 className="text-[20px] font-bold  leading-[30px]">Time and Attendance</h1>
-          <p>Branch: Abuja</p>
+          <h1 className="text-[20px] font-bold w-[270px] lg:w-[auto]  leading-[30px]">
+            Time and Attendance
+          </h1>
+          <p>Branchs</p>
 
-          <div className="grid grid-cols-3 mb-[-30px] m-4 gap-40 text-[20px] font-normal leading-[30px]">
-            <h2>Department</h2>
-            <h2>Employee</h2>
-            <h2>Status</h2>
-          </div>
+
           {/* Table container */}
-          <table className=" grid">
-            <tbody>
-              {leaderboard.map((leader,) => (
-                <tr className="grid grid-cols-3 text-[18px] my-8 gap-38 items-center">
-                  <td>
-                    <div className="m-4">
-                      {leader.department}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="ml-[50px]" >
-                      {leader.employee}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="ml-[100px]" >
-                      {leader.status}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div>
+          <ul className=" justify-center m-[20px] md:m-0 pt-3  lg:pt-[60px]">
+        {Places.map((item, index) => {
+          return (
+            <li key={index} className={item.cName} >
+              <Link to={item.path} >
+                <div className=" ">
+                  <div className=" flex items-center md:flex md:justify-between m-4 lg:ml-2 mt-[28px] lg:mt-[20px] ">
+                    <div className=" text-[red]">{item.title}</div>
+                    <div className=" ml-[120px] lg:ml-[315px]">{item.icon}</div>
+                  </div>
+                  <div></div>
+                </div>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+          </div>
         </div>
       </div>
-      <img className="w-[451px]" src={bar} alt="" />
-      {/* <WeeklyStatus /> */}
-    </div>
   );
 };
 

@@ -1,5 +1,5 @@
-import React from "react";
-import { Formik } from "formik";
+import React, { useState } from "react";
+// import { Formik } from "formik";
 import Frame from "../../assets/Frame.svg";
 import logo from "../../assets/logo.svg";
 
@@ -7,8 +7,21 @@ import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const handleSubmit = () => {
-    navigate("/Dashboard");
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
+
+  const users = [
+    { username: "Admin", password: "test" },
+    { username: "Midadmin", password: "test" },
+    { username: "user", password: "testpassword" },
+  ];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const account = users.find((user) => user.username === username);
+    if (account && account.password === password) {
+      navigate("/dashboard2");
+    }
   };
   return (
     <div className="lg:grid lg:grid-cols-2">
@@ -23,77 +36,28 @@ const Signup = () => {
 
         <h1 className="text-[40px] lg:my-7">Login</h1>
         <h2 className="text-[20px] lg:my-8">Please login to your account</h2>
-        <Formik
-          initialValues={{ email: "", password: "" }}
-          className=" grid  "
-          validate={(values) => {
-            const errors = {};
-            if (!values.email) {
-              errors.email = "please enter your email";
-            } else if (
-              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            ) {
-              errors.email = "Invalid email address";
-            }
-            if (!values.password) {
-              errors.password = "password is incorrect";
-            }
-            return errors;
-          }}
-          onSubmit={handleSubmit}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-            /* and other goodies */
-          }) => (
-            <form className="grid w-[auto] " onSubmit={handleSubmit}>
-              Email
+
+        <div className="block">
+          <form className="grid grid-cols-1" onSubmit={handleSubmit}>
+            <div className="grid">
               <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
+              placeholder="username"
+                type="text"
+                name="Username"
                 className="shadow appearance-none border border-[#148B92] rounded w-[auto] my-4  py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                value={username}
+                onChange={(e) => setusername(e.target.value)}
               />
-              {errors.email && touched.email && errors.email}
-              Password
               <input
                 type="password"
-                name="password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
+                name="Password"
                 className="shadow appearance-none border border-[#148B92] rounded w-[auto] my-4  py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                onChange={(e) => setpassword(e.target.value)}
               />
-              <div className="text-[red] mt-0">
-                {errors.password && touched.password && errors.password}
-              </div>
-              <div className="flex  my-6 justify-between">
-                <p className=" text-[15px] ">
-                  <input type="checkbox" />
-                  Keep me logged in.
-                </p>
-                <p className="inline-block align-baseline font-bold text-sm text-[#09969F]">
-                  Forgot Password?
-                </p>
-              </div>
-              <button
-                className="bg-[#09969F] w-[200px] m-[auto]  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="submit"
-              >
-                LOGIN
-                {isSubmitting ? "Please wait..." : ""}
-              </button>
-            </form>
-          )}
-        </Formik>
+            </div>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
     </div>
   );
