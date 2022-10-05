@@ -1,0 +1,195 @@
+.token-sales {
+    margin-top: 75vh;
+     background: var(--grey-color); 
+    z-index: 1;
+    padding: 50px 10px 140px 10px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+[data-theme="dark"] .token-sales {
+    background: var(--black) !important;
+   
+  }
+.token-sales h3 {
+    font-size: var(--font-mid);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.token-sales h1 {
+    font-size: var(--font-large);
+    color: var(--black-color);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+}
+[data-theme="dark"] .token-sales h1 {
+    color: var(--primary-color);
+
+  }
+  [data-theme="dark"] .token-sales h4 {
+    color: var(--primary-color);
+
+  }
+
+/* The token sales box */
+.token-sales-box {
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+/* token card left */
+.token-card-left {
+    background: var(--left-card-color);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform ease 300ms;
+    box-shadow: 0px 20px 40px rgba(91, 72, 167, 0.4);
+}
+
+.token-card-left:hover,
+.token-card-right:hover {
+    transform: translate(0, -15px);
+}
+
+.token-left h2 {
+    color: var(--white-color);
+    font-size: var(--font-large);
+}
+
+.token-left small {
+    color: #a5a5ff;
+    text-transform: uppercase;
+}
+
+.token-left p {
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.token-left button {
+    border: 2px solid var(--white-color);
+    border-radius: 25px;
+    outline: none;
+    padding: 10px;
+    width: 150px;
+    color: var(--white-color);
+    font-weight: 600;
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.token-left button:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: 2px solid var(--primary-color);
+}
+
+.arrow {
+    font-size: var(--font-med);
+    transition: var(--transition);
+}
+
+.token-right {
+    border-radius: 50%;
+    border: 5px solid rgba(102, 109, 255, 0.25);
+}
+
+/* Token card right */
+.token-card-right {
+    background: var(--right-card-color);
+    border-radius: 15px;
+    /* width: 520px; */
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform ease 300ms;
+    box-shadow: 0px 20px 40px rgba(91, 72, 167, 0.4);
+}
+
+.token-sales h4 {
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 800;
+}
+
+.token-sales h4 span {
+    color: var(--primary-color);
+}
+
+/* ====================================== */
+/* THE RESPONSIVENESS */
+/* ====================================== */
+@media (min-width: 1240px) {
+    .token-sales {
+        height: 100vh;
+        padding: 30px 10px 70px 10px;
+    }
+
+    .token-sales h3 {
+        font-size: var(--font-med);
+    }
+
+    .token-sales h4 {
+        margin-bottom: 20px;
+    }
+
+    /* The token sales box */
+    .token-sales-box {
+        width: 70%;
+    }
+}
+
+@media (max-width: 899px) {
+    .token-sales {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 790px) {
+    .token-sales {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    }
+
+    .token-sales-box {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+}
+
+@media (max-width: 481px) {
+    .token-sales-box {
+        width: 100%;
+    }
+
+    .token-left h2 {
+        font-size: var(--font-big);
+        font-weight: 800;
+    }
+
+    .token-card-left {
+        padding: 20px 15px;
+    }
+
+    .token-card-right {
+        padding: 20px 15px;
+    }
+
+    .token-sales-box button {
+        font-size: var(--font-smaller);
+        width: 130px;
+    }
+}

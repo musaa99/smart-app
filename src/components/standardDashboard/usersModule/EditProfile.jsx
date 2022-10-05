@@ -1,7 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import profilepic from "../../../assets/profilepic.svg";
+import Modal from "../../modal/Modal";
+import ConfirmPassword from "../logins/ConfirmPassword";
 
 const EditProfile = () => {
+  const [changePassword, ChangePassword] = useState(false);
+  const [twoFactor, TwoFactor] = useState(false);
+
+  
+
   return (
     <>
       <main className="m-4 border-b-4  ">
@@ -17,7 +24,8 @@ const EditProfile = () => {
             </div>
           </div>
           <div className="w-[170px] lg:w-auto m-auto lg:ml-[150px]">
-            <button className=" button w-[148px]   h-[58px]">Edit Photo</button>
+            <button onClick={() => ChangePassword((prev) => !prev)} className=' button w-[180px] lg:w-[230px] h-[58px]'>Change Password</button>
+            
           </div>
         </div>
       </main>
@@ -28,7 +36,7 @@ const EditProfile = () => {
           <p className="mt-[10px]">Sarah Edem </p>
         </div>
         <div className=" md:ml-auto lg:ml-[220px]">
-          <button className=" button w-[85px]   h-[58px]">Edit</button>
+          <button onClick={() => TwoFactor((prev) => !prev)} className=" button w-[85px]   h-[58px]">Edit</button>
         </div>
       </div>
       <div className="flex justify-between items-center border-b-4 p-4 lg:grid lg:grid-cols-2 ">
@@ -68,6 +76,50 @@ const EditProfile = () => {
           </button>
         </div>
       </div>
+      <div  className={changePassword ? "flex" : "hidden"}    > 
+      <ConfirmPassword onClickClose={() => ChangePassword((prev) => !prev)} />
+      
+
+      {/* <Modal>
+              <>
+                            <div className="token-modal">
+                                <h3>Public Sale iii has not started, but will start really soon!</h3>
+                                <small>Check back in</small>
+                            </div>
+                            <div className="w-[170px] lg:w-auto m-auto lg:ml-[150px]">
+            <button onClick={() => ChangePassword((prev) => !prev)} className=' button w-[180px] lg:w-[230px] h-[58px]'>Change Password</button>
+            
+          </div>
+                        </>
+              </Modal> */}
+            
+          </div>
+      <div  className={twoFactor ? "flex" : "hidden"}    > 
+      <Modal>
+              <>
+                            <div className="token-modal">
+                                <h3>Public Sale iii has not started, but will start really soon!</h3>
+                                <small>Check back in</small>
+                            </div>
+                            <div className="w-[170px] lg:w-auto m-auto lg:ml-[150px]">
+            <button onClick={() => TwoFactor((prev) => !prev)} className=' button w-[180px] lg:w-[230px] h-[58px]'>Change Password</button>
+            
+          </div>
+                        </>
+              </Modal>
+              
+            
+          </div>
+      
+              {/* <Modal>
+              <>
+                            <div className="token-modal">
+                                <h3>Public Sale iii has not started, but will start really soon!</h3>
+                                <small>Check back in</small>
+                            </div>
+                        </>
+              </Modal> */}
+          
     </>
   );
 };

@@ -10,7 +10,7 @@ import Delete from './Delete';
 const Login = ({ setDashboardModal }) => {
 
 
-  const [changePassword, ChangePassword] = useState(false);
+  const [changePassword, setChangePassword] = useState(false);
   const [twoFactor, TwoFactor] = useState(false);
   const [logOut, LogOut] = useState(false);
   const [deleteAccount, DeleteAccount] = useState(false);
@@ -25,13 +25,13 @@ const Login = ({ setDashboardModal }) => {
             <h2>Password</h2>
             <span>Last Updated: 4th August</span>
             </div>
-            <button onClick={() => ChangePassword((prev) => !prev)} className=' button w-[180px] lg:w-[230px] h-[58px]'>Change Password</button>
+            <button onClick={() => setChangePassword((prev) => !prev)} className=' button w-[180px] lg:w-[230px] h-[58px]'>Change Password</button>
         </div>
         <div  className={changePassword ? "flex" : "hidden"}    > 
-        <ConfirmPassword/>
+        {/* <ConfirmPassword onClickClose={() => console.log('sss')} /> */}
             <div
               className=""
-              onClick={() => ChangePassword(false)} // change Changepassword state to false to close 
+              onClick={() => setChangePassword(false)} // change Changepassword state to false to close 
             >
               <svg
                 className="h-8 w-8 text-gray-600"

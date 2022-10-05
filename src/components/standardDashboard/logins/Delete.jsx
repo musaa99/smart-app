@@ -11,7 +11,7 @@ const Delete = () => {
         </h1>
         <p className="pt-[10px] text-center mx-[80px] ">
         If you delete your account now, you will have the option to recover 
-        it within 30 days before it is permanently deleted.
+        it ithin 30 days before it is permanently deleted.
         </p>
         <p className="pt-[10px]  text-center">
         When you delete your account you loose all related data 
