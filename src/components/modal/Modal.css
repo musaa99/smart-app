@@ -15,7 +15,7 @@
 .modalContainer {
     width: 97%;
     max-width: 600px;
-    background-color: white;
+    /* background-color: white; */
     box-shadow: var(--shadoos);
     padding: 10px;
     text-align: center;
@@ -24,7 +24,7 @@
 }
 
 /* The token modal */
-.token-modal {
+/* .token-modal {
     text-align: center;
     color: var(--white-color);
 }
@@ -67,7 +67,7 @@
     align-items: center;
     background: orange;
     margin: 0;
-}
+} */
 
 
 

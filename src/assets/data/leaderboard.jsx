@@ -1,4 +1,4 @@
-// Profile pictures
+
 
 export const  leaderboard = [
   {

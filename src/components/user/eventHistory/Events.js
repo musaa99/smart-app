@@ -1,6 +1,5 @@
-import "./Modal.css";
 
-const Modal = ({ children  }) => {
+const Ellipse = ({ children  }) => {
     return (
         <div className="modalBackground">
             <div className="modalContainer">{children}</div>
@@ -9,5 +8,4 @@ const Modal = ({ children  }) => {
     );
 };
 
-export default Modal;
- 
+export default Ellipse;
